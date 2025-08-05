@@ -47,7 +47,6 @@
 
         /* --- Estilos do Conteúdo Principal --- */
         .conteudo-principal {
-            /* Faz o conteúdo principal ocupar todo o espaço restante */
             flex: 1;
         }
 
@@ -56,6 +55,7 @@
             margin-top: 24px;
             font-size: 1.1em;
             color: #fff;
+            padding: 0 16px;
         }
 
         .miniaturas {
@@ -63,6 +63,13 @@
             justify-content: center;
             gap: 12px;
             margin-top: 24px;
+            flex-wrap: wrap;
+            padding: 0 16px;
+        }
+
+        .miniaturas a {
+            display: block;
+            /* Garante que o link ocupe o espaço da imagem */
         }
 
         .miniaturas img {
@@ -89,8 +96,33 @@
         }
 
         .rodape {
-            /* Este é o código que empurra o rodapé para baixo */
             margin-top: auto;
+        }
+
+        /* --- MEDIA QUERY PARA TELAS MENORES (smartphones) --- */
+        @media (max-width: 600px) {
+            #heading .heading-title {
+                font-size: 1.5em;
+            }
+
+            .subtitulo {
+                font-size: 1.1em;
+            }
+
+            .descricao {
+                font-size: 1em;
+            }
+
+            .miniaturas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .miniaturas img {
+                width: 80%;
+                max-width: 250px;
+                margin-bottom: 16px;
+            }
         }
     </style>
 </head>
@@ -107,14 +139,22 @@
         <p class="descricao">ESTÁ CHEGANDO O MOMENTO MAIS AGUARDADO DO ANO!</p>
 
         <div class="miniaturas">
-            <img src="https://i.postimg.cc/ZnCS61yy/Whats-App-Image-2025-08-04-at-20-38-43.jpg" alt="Miniatura 1">
-            <img src="https://i.postimg.cc/m214kWsv/Captura-de-tela-de-2025-08-04-20-53-05.png" alt="Miniatura 2">
-            <img src="https://i.postimg.cc/8CNgZF6G/Captura-de-tela-de-2025-07-28-16-41-22.png" alt="Miniatura 3">
+            <a href="https://exemplo.com/link1" target="_blank">
+                <img src="https://i.postimg.cc/ZnCS61yy/Whats-App-Image-2025-08-04-at-20-38-43.jpg" alt="Miniatura 1">
+            </a>
+
+            <a href="https://exemplo.com/link2" target="_blank">
+                <img src="https://i.postimg.cc/m214kWsv/Captura-de-tela-de-2025-08-04-20-53-05.png" alt="Miniatura 2">
+            </a>
+
+            <a href="https://exemplo.com/link3" target="_blank">
+                <img src="https://i.postimg.cc/8CNgZF6G/Captura-de-tela-de-2025-07-28-16-41-22.png" alt="Miniatura 3">
+            </a>
         </div>
     </main>
 
     <footer class="rodape" id="footer">
-        <p>© 2025 TF2K26 - Todos os direitos reservados a UPA RELIGADOS, !SITE FEITO POR BRINCADEIRA SOMENTE!</p>
+        <p>© 2025 TF2K26 - Todos os direitos reservados a UPA RELIGADOS</p>
     </footer>
 
 </body>
