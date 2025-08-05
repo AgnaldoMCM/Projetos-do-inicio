@@ -1,43 +1,100 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TF2K26</title>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.postimg.cc/BvVNXksz/MG-0588.jpg');
+            background-size: cover;
+            background-color: #f9f9f9;
+            background-repeat: no-repeat;
+
+            /* CÓDIGO PARA O RODAPÉ FIXO */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Estilos do Cabeçalho --- */
         #heading {
             background: #00A8E1;
             padding: 16px 0;
             text-align: center;
         }
+
         #heading .heading-title {
             margin: 0;
             font-size: 2em;
             text-transform: uppercase;
         }
+
         #heading a {
             color: #fff;
             text-decoration: none;
         }
+
         .subtitulo {
             margin: 0;
             font-size: 1.3em;
             color: #fff;
             font-weight: 400;
         }
+
+        /* --- Estilos do Conteúdo Principal --- */
+        .conteudo-principal {
+            /* Faz o conteúdo principal ocupar todo o espaço restante */
+            flex: 1;
+        }
+
         .descricao {
             text-align: center;
             margin-top: 24px;
             font-size: 1.1em;
-            color: #333;
+            color: #fff;
         }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f9f9f9;
+
+        .miniaturas {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .miniaturas img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .miniaturas img:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        /* --- Estilos do Rodapé --- */
+        #footer {
+            background: #00A8E1;
+            color: #fff;
+            text-align: center;
+            padding: 16px 0;
+            font-size: 0.95em;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .rodape {
+            /* Este é o código que empurra o rodapé para baixo */
+            margin-top: auto;
         }
     </style>
 </head>
+
 <body>
     <header id="heading">
         <h1 class="heading-title">
@@ -45,8 +102,23 @@
         </h1>
         <h2 class="subtitulo">TF2K26</h2>
     </header>
-    <p class="descricao">ESTÁ CHEGANDO O MOMENTO MAIS AGUARDADO DO ANO!</p>
+
+    <main class="conteudo-principal">
+        <p class="descricao">ESTÁ CHEGANDO O MOMENTO MAIS AGUARDADO DO ANO!</p>
+
+        <div class="miniaturas">
+            <img src="https://i.postimg.cc/ZnCS61yy/Whats-App-Image-2025-08-04-at-20-38-43.jpg" alt="Miniatura 1">
+            <img src="https://i.postimg.cc/m214kWsv/Captura-de-tela-de-2025-08-04-20-53-05.png" alt="Miniatura 2">
+            <img src="https://i.postimg.cc/8CNgZF6G/Captura-de-tela-de-2025-07-28-16-41-22.png" alt="Miniatura 3">
+        </div>
+    </main>
+
+    <footer class="rodape" id="footer">
+        <p>© 2025 TF2K26 - Todos os direitos reservados a UPA RELIGADOS, !SITE FEITO POR BRINCADEIRA SOMENTE!</p>
+    </footer>
+
 </body>
+
 </html>
 
 
